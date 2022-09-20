@@ -1,0 +1,33 @@
+---
+import Navigation from '../components/Navigation.astro';
+---
+<header>
+<div>
+  <div>
+    <a href="/">Logo</a>
+  </div>
+  <div>
+    <Navigation />
+  </div>
+  </div>
+</header>
+
+<style>
+  header {
+    background: #FF1D58;
+  }
+
+  header > div {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  header > div > div {
+    align-self: center;
+    color: white;
+  }
+</style>
