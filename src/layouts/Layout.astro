@@ -6,6 +6,7 @@ export interface Props {
 const { title } = Astro.props;
 
 import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <!DOCTYPE html>
@@ -19,9 +20,29 @@ import Header from '../components/Header.astro';
 	</head>
 	<body>
 	<Header />
+	<Hero />
 		<slot />
 	</body>
 </html>
+<style is:global>
+	h1 {
+		font-size: var(--font-size-xl);
+	}
+
+	h2 {
+		font-size: var(--font-size-lg);
+	}
+
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+	a {
+		color: #FFF;
+		text-decoration: none;
+	}
+</style>
 <style>
 	:root {
 		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
@@ -42,22 +63,6 @@ import Header from '../components/Header.astro';
 
 	body {
 		margin: 0;
-	}
-
-
-</style>
-
-<style is:global>
-	h1 {
-		font-size: var(--font-size-xl);
-	}
-
-	h2 {
-		font-size: var(--font-size-lg);
-	}
-
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+		background: #0049B7;
 	}
 </style>
